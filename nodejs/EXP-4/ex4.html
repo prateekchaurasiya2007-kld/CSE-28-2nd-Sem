@@ -3,30 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marks</title>
-    <style>
-        .container{
-            width: 340px;
-            height: 340px;
-            background-color: darkseagreen;
-            margin: 0 auto;
-
-        }
-
-
-    </style>
+    <title>Document</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <style>
+    body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    
+}
+.container{
+    padding: 30px;
+    margin-top: 100px;
+    width: 400px;
+    height: auto;
+    border: 1px solid rgb(165, 161, 161);
+    text-align: center;
+   border-radius: 20px;
+   box-shadow: 0 2px 4px 0;
+   background-color: #F5F7FA;
+}
+label{
+    font-size:1.2rem;
+}
+input{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+hr{
+    color: rgb(205, 202, 202);
+    opacity: 0.5;
+    height: 1px;
+}
+button{
+ width: 300px;
+ height: 40px;
+ color: white;
+ background-color: #1E6FD9;
+ border-radius: 10px;
+ border: none;
+ box-shadow: 0 2px 4px 0;
+ opacity: 1;
+ font-size: larger;
+ cursor: pointer;
+}
+button:hover{
+    animation-name:hover;
+   background-color: #1557B0;
+   animation-duration: 1s;
+}
+@keyframes hover{
+    from{opacity: 0.5;}to{opacity:1;}
+}
+h3{
+    margin: 0;
+    padding-bottom: 5px;
+}
+#result{
+    width: 380px;
+    border: 1px solid black;
+   min-height: 50px;
+    background-color: #EEF1F5;
+    border: 1px solid grey ;
+    font-size: larger;
+    border-radius: 10px;
+}
+.color{
+    background-color: green;
+}
+   </style>
 </head>
 <body>
-    <div class="container">
-       <h2>Student Result Calculator</h2>
-        <label for="subjects"> Enter Number of Subjects</label><br>
-        <input type="number" id="subjects"><br><br>
-        <button onclick="calculateresult()">calculate Result</button>
-        <div id="Result"></div>
+<div class="container" >
+    <h2>Calculate the Result</h2>
+    <hr>
+    <br> 
+    <label for="#">Enter no Of Subject:</label>
+    <input type="number" placeholder="Enter Number Of Subject" id="subject" >
+    <hr>
+    <br>
+    <button onclick="calculateResult()" id="button">Calculate Result</button>
+    <hr>
+    <br>
+    <h3>Result</h3>
+    <div id="result">
+        
     </div>
-    <script src="ex4.js"></script>
+    <br>
+    <button onclick="resetResult()">Reset</button>
 
-
-    
+</div>
+<script src="ex4.js" ></script>
 </body>
 </html>
